@@ -2,16 +2,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "cds serve",
+      "name": "Sachin CAPAPP",
       "request": "launch",
-      "type": "node",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "cds",
-      "args": [
-        "serve",
-        "--with-mocks",
-        "--in-memory?"
-      ],
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}//capapp",
       "skipFiles": [
         "<node_internals>/**"
       ]
