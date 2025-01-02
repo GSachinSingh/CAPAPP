@@ -14,6 +14,10 @@
     "@cap-js/cds-types": "^0.7.0"
   },
   "scripts": {
-    "start": "cds-serve"
-  }
+    "start": "cds-serve",
+    "watch-purchaseorderapp": "cds watch --open purchaseorderapp/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "sapux": [
+    "app/purchaseorderapp"
+  ]
 }
