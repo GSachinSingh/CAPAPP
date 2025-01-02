@@ -1,6 +1,6 @@
 using { sachin.db.master as master, sachin.db.transaction as transaction } from '../db/data-model';
 
-service AdminService @(path:'AdminService') {
+service AdminService @(path:'AdminService', requires: 'authenticated-user') {
     function getLargestOrder() returns POs;
     //definition
     function getOrderDefaults() returns POs;

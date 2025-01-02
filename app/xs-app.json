@@ -1,0 +1,25 @@
+{
+    "welcomeFile": "purchaseorderapp/webapp/",
+    "authenticationMethod": "route",
+    "sessionTimeout": 100,
+    "pluginMetadataEndpoint": "/metadata",
+    "routes": [
+      {
+        "source": "^/purchaseorderapp/webapp/(.*)",
+        "target": "$1",
+        "localDir": "purchaseorderapp/webapp/",
+        "authenticationType": "xsuaa",
+        "csrfProtection":"false"
+      },
+      {
+        "source": "^/(.*)$",
+        "destination": "srv-api",
+        "authenticationType": "xsuaa",
+        "csrfProtection":"false"
+      }
+    ],
+    "logout":{
+        "logutEndPoint":"/my/logout",
+        "logoutPage":"https://www.sap.com"
+    }
+  }

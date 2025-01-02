@@ -1,0 +1,58 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Viewer",
+      "description": "Viewer"
+    },
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Admin"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "BankName",
+      "description": "BankName",
+      "valueType": "s",
+      "valueRequired": false
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Viewer",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Viewer"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "Admin",
+      "description": "Edit employee details",
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "userattributes",
+      "description": "generated",
+      "default-role-name": "Attributes of a User",
+      "scope-references": [],
+      "attribute-references": [
+        "BankName"
+      ]
+    }
+  ],
+  "authorities": [
+    "$ACCEPT_GRANTED_AUTHORITIES"
+  ],
+  "oauth2-configuration": {
+    "token-validity": 9000,
+    "refresh-token-validity":1800,
+    "redirect-uris": [
+      "https://api.cf.us10-001.hana.ondemand.com"
+    ]
+  },
+  "xsenableasyncservice": "true"
+}
